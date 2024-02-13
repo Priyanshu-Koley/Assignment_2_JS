@@ -1,0 +1,216 @@
+/* Font style of the page */
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Styles for Headings */
+.heading{
+  color: #366294;
+}
+
+/* Styles for navigation bar */
+.navbar {
+  background-color: #333;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #3979e7;
+}
+
+.active-link{
+  background-color: #2b5db2;
+}
+
+
+/* Styles for page container */
+.page-container{
+  padding: 16px;
+}
+
+
+/* Styles for add employee card */
+.form{
+  width: 350px;
+  margin: 50px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #b7cced6b;
+  box-shadow: 0px 0px 15px #6a6969;
+}
+.table-add-employee td{
+  border: 0px;
+}
+.add-employee-input{
+  font-size: 15px;
+  border: 0px;
+  padding: 5px;
+  width: 93%;
+  box-shadow: 0px 1px 5px #5d5d5d;
+  background-color: #ffffff80;
+  border-radius: 3px;
+}
+.add-employee-input:focus-visible{
+  outline: none;
+}
+textarea{
+  resize: vertical;
+}
+/*Styles for add employee button */
+.btn-row{
+  text-align: center;
+  padding: 40px 8px 8px 8px;
+}
+.add-employee-btn {
+  font-size: 15px;
+  width: 100%;
+  background-color: #28a745;
+  color: #ffffff;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 0px;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px #5d5d5d;
+}
+
+.add-employee-btn:hover {
+  background-color: #218838;
+}
+
+.add-employee-btn:active{
+  background-color: #165b24;
+  box-shadow: 0px 0px 0px #ffffff;
+}
+
+/* Styles for helper text */
+.helper{
+  color: crimson;
+  font-size: 13px;
+}
+.hide{
+  display: none;
+}
+/* Styles for View employee table */
+.empty-employee{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(212, 24, 24);
+}
+.view-employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.view-employee-table th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.view-employee-table th {
+  background-color: #f2f2f2;
+}
+
+/* Styles for Edit employee page */
+.table-edit-employee td{
+  border: 0px;
+}
+.edit-employee-input{
+  font-size: 15px;
+  border: 0px;
+  padding: 5px;
+  width: 93%;
+  box-shadow: 0px 1px 5px #5d5d5d;
+  background-color: #ffffff80;
+  border-radius: 3px;
+}
+.edit-employee-input:focus-visible{
+  outline: none;
+}
+
+
+/* Styles for blue btn */
+.blue-btn{
+  font-size: 15px;
+  background-color: #3979e7;
+  color: #ffffff;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 10px;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px #5d5d5d;
+}
+.blue-btn:hover {
+  background-color: #2b5db2;
+}
+.blue-btn:active{
+  background-color: rgb(42, 92, 177);
+  box-shadow: 0px 0px 0px #ffffff;
+}
+/* Styles for danger btn */
+.danger-btn{
+  font-size: 15px;
+  background-color: #dc143c;
+  color: #ffffff;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 10px;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px #5d5d5d;
+}
+
+.danger-btn:hover {
+  background-color: #a50f2d;
+}
+.danger-btn:active{
+  background-color: #900823;
+  box-shadow: 0px 0px 0px #ffffff;
+}
+
+/* Mobile Screen*/
+
+@media only screen and (max-width: 425px){
+    /* Styles for rows of add employee form and edit form*/
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    /* Styles for table container of employee list */
+    .table-container{
+        overflow-x: auto;
+    }
+
+    .form{
+      width: 90%;
+    }
+   
+}

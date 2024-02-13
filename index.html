@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="./styles.css"> <!-- Import style.css --> 
+  <script defer src="./script.js"></script> <!-- Import script.js --> 
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <ul>
+      <!-- Add employee page navigation btn -->
+      <li><a href="#" class="link" id="add-employee-link" onclick="showAddEmployee()">Add Employee</a></li>
+      <!-- View employee page navigation btn -->
+      <li><a href="#" class="link" id="view-employee-link" onclick="showViewEmployees()">View Employees</a></li>
+    </ul>
+  </nav>
+  <!-- Main page content -->
+  <section class="page-container">
+    <!-- Add employee page -->
+    <div id="add-employee-page">
+      <!-- Heading -->
+      <h1 class="heading">Add Employee</h1>
+      <!-- Add employee form -->
+      <form action="" class="form" id="add-employee-form">
+        <table class="table-add-employee">
+          <tbody>
+            <!-- Row 1 (Name Input) -->
+            <tr class="row">
+              <td>
+                <label for="name" class="add-employee-label">Name</label>
+              </td>
+              <td>
+                <input type="text" class="add-employee-input" id="name" required>
+              </td>
+            </tr>
+            <!-- Row 2 (Address Input) -->
+            <tr class="row">
+              <td>
+                <label for="address" class="add-employee-label">Address</label>
+              </td>
+              <td>
+                <textarea name="address" class="add-employee-input" id="address" cols="20" rows="2"></textarea>
+              </td>
+            </tr>      
+            <!-- Row 3 (EmployeeID Input) -->
+            <tr class="row">
+              <td>
+                <label for="employeeId" class="add-employee-label">Employee ID</label>
+              </td>
+              <td>
+                <input type="text" class="add-employee-input" id="employeeId" required>
+              </td>
+            </tr>
+            <!-- Row 4 (Designation Input) -->
+            <tr class="row"> 
+              <td>
+                <label for="designation" class="add-employee-label">Designation</label>
+              </td>
+              <td>
+                <input type="text" class="add-employee-input" id="designation" required>
+              </td>
+            </tr>
+            <!-- Add Employee btn -->
+            <tr class="row"> 
+              <td colspan="2" class="btn-row">
+                <button class="add-employee-btn">Add Employee</button>
+                <small class="helper hide" id="helper-same-empId">Employee ID can't be same</small>
+                <p class="helper hide" id="helper-null-field">Name, Employee ID and Designation can't be empty</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <!-- List of employee page -->
+    <div id="view-employees-page">
+      <!-- Heading -->
+      <h1 class="heading">All Employees</h1>
+      <!-- Employee table -->
+      <div class="table-container">
+        <table id="employees-table" class="view-employee-table">
+          <!-- Table heading -->
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Employee ID</th>
+              <th>Designation</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <!-- Employee data will be appended dynamically here -->
+          <tbody id="employees-list"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Edit employee page -->
+    <div id="edit-employee-page">
+      <!-- Heading -->
+      <h1 class="heading">Edit Employee</h1>
+      <!-- Edit employee form -->
+      <form action="" class="form" id="edit-employee-form">
+        <table class="table-edit-employee">
+          <tbody>
+            <!-- Row 1 (Name Input) -->
+            <tr class="row">
+              <td>
+                <label for="name" class="edit-employee-label">Name</label>
+              </td>
+              <td>
+                <input type="text" class="edit-employee-input" id="edit-name" required>
+              </td>
+            </tr>
+            <!-- Row 2 (Address Input) -->
+            <tr class="row">
+              <td>
+                <label for="address" class="edit-employee-label">Address</label>
+              </td>
+              <td>
+                <textarea name="address" class="edit-employee-input" id="edit-address" cols="20" rows="2"></textarea>
+              </td>
+            </tr>      
+            <!-- Row 3 (Disabled EmployeeID Input) -->
+            <tr class="row">
+              <td>
+                <label for="employeeId" class="edit-employee-label">Employee ID</label>
+              </td>
+              <td>
+                <input type="text" class="edit-employee-input" id="edit-employeeId" disabled>
+              </td>
+            </tr>
+            <!-- Row 4 (Designation Input) -->
+            <tr class="row"> 
+              <td>
+                <label for="designation" class="edit-employee-label">Designation</label>
+              </td>
+              <td>
+                <input type="text" class="edit-employee-input" id="edit-designation" required>
+              </td>
+            </tr>
+            <!-- Update Employee btn and Cancel btn -->
+            <tr class="row"> 
+              <td colspan="2" class="btn-row">                
+                <button class="blue-btn" type="submit">Update</button>
+                <button class="danger-btn" onclick="cancelEdit()">Cancel</button>
+                <p class="helper hide" id="helper-null-field-update">Name and Designation can't be empty</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
